@@ -13,3 +13,4 @@ Version history:
 Version 0.1
 
 Initial implementation
+Contains a function to "roll a dice" with values from 0 to 10
