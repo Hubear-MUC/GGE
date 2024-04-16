@@ -1,46 +1,70 @@
-GGE 0.2
+GGE 0.3
 -------
 
 GGE is supposed to be a collection of functions and objects used in the
 games written along the progress- project.
 
-It is planned to write several games along this progress- project to demonstrate programming skills in a hopefully funny way.
+To use it, just place the files 
 
-
-If things keep to turn out good GGE is supposed to become a small game engine one day. 
-
-To use it, just place the file GGE.h inside your project folder and include 
-it as
+  gge.h   and
+  gge.cpp
+  
+inside your project folder and include  gge.h
 
   #include "gge.h"
 
-See the implemented function below.
 
-As some development since version 0.1 the code files got separated into a header- file (.h) and a C++- code file which contains the implementations.
+By the way: At GGE was a little cheated regarding the code space in which
+the code should fit.
+To GGE also the file  test.cpp  belongs, to test the function included. 
+These bytes of code were not counted despite this file belongs to the written 
+code.
 
-Also just one function inside it does not really earn the status of a library, also the usage did not change since the previous version, thus just a stepup of the minor version number.
+Sorry about that to all who have a strict look on the growth of the code, 
+however it seemed more important to me to include the new function to make 
+GGE more flexible when used in dice games.
+
+
+Version 0.3 now supports an arbitrary maximal number for the dice to roll.
+This should make it more usable for role playing games.
 
 
 
 Implemented functions:
 ----------------------
 
-int dice10();
+int dice(int vl)
+
+returns a random number in the range from 1 to the value given as argument vl.
+
+For example
+
+  dice(100)
+
+returns a random number from 1 to 100.
+
+
+
+int dice10()
 
 returns a random number in the range from 1 to 10;
-
 
 
 
 Version history:
 ----------------
 
+Version 0.3
+
+New function implemented to dice to an arbitrary hightest number with passing 
+it as argument:  int dice()
+
+In fact dice10() now uses dice() to roll the dice with the argument of 10
+
+
 Version 0.2
 
-Separation of the library files into a .h- file and a .cpp- file.
-
-
-Version 0.1
-
-Initial implementation
-Contains a function to "roll a dice" with values from 0 to 10
+GGE.cpp got introduced to contain the function and future functions and
+classes.
+As in version 0.1 just  GGE.h  needs to be included into the source file of
+the game to make it work. GGE.cpp will included via the file GGE.h
