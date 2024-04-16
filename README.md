@@ -3,12 +3,20 @@ A small library containing things for small games
 
 See "readme.txt" for details.
 
-Code extent: Max. 146 bytes
+Code extent: Max. 168 bytes
 
 ---
 
 Version history:
 --
+
+Version 0.3
+
+New function implemented to dice to an arbitrary hightest number with passing 
+it as argument:  int dice()
+
+In fact dice10() now uses dice() to roll the dice with the argument of 10
+
 
 Version 0.2
 
