@@ -3,12 +3,20 @@ A small library containing things for small games
 
 See "readme.txt" for details.
 
-Code extent: Max. 168 bytes
+Code extent: Max. 186 bytes
 
 ---
 
 Version history:
 --
+
+Version 0.4
+
+Replacing the functions dice (int) and dice10() with a class  ggeDice.
+Due to technical problems with the development environment I had to remove the functions.
+
+However the random number generation works better now.
+
 
 Version 0.3
 
